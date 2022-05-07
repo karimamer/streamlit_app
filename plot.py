@@ -37,7 +37,7 @@ df_fil = df_fbref[df_fbref['90s']>=no_90s]
 df_fil = df_fbref[df_fbref['90s']>=no_90s]
 df_fil = df_fil[df_fil['Pos'].apply(lambda x: x in ['MF','MF,FW','FW,MF'])]
 print(df_fil.head())
-fig = px.scatter(df_fil, x=(df_fil['Prog']/df_fil["90s"]), y=(df_fil['Att'].iloc[:,0]/df_fil["90s"]),title='Prog/90 vs Att/90s', hover_data=['Player','Pos','Comp','Nation'], color="Player", size="90s",text="Player", labels={"x": "Prog/90", "y": "Att/90s"}, width=800, height=800)
+fig = px.scatter(df_fil, x=(df_fil['Prog']/df_fil["90s"]), y=(df_fil['Att'].iloc[:,0]/df_fil["90s"]),title='Prog/90 vs Att/90s', hover_data=['Player','Pos','Comp','Nation'], color="Player", size="90s",text="Player", labels={"x": "Prog/90", "y": "Att/90s"})
 fig.update_traces(textposition="top center")
 fig.show()
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, use_container_width=True, height=1000)
