@@ -11,6 +11,8 @@ streamlit = "^0.79.0"
 pandas = "1.2.2"
 numpy = "^1.20.1"
 plotly = "^5.7.0"
+click = "8.0.4"
+lxml = "^4.8.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
